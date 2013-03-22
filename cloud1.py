@@ -375,7 +375,7 @@ def _draw_cloud(
 def create_tag_image(
         tags, 
         output, 
-        size=(500,500), 
+        size=(900,900), 
         background=(255, 255, 255), 
         layout=LAYOUT_MIX, 
         fontname=DEFAULT_FONT,
@@ -467,8 +467,8 @@ if __name__ == '__main__':
     #     print('usage: %s <doc1> <doc2>')
     #     sys.exit(1)
     # else:
-	file1 = "Mr. Cuomo, who in 2011 described a new high tax bracket as a short-term solution to help the state weather a financial emergency, did not mention his desire to extend the new tax bracket when he publicly announced his budget proposal in January, or in the weeks since as he and his cabinet members have crisscrossed the state, promoting his spending plan to residents."
-	file2 = "The Legislature Legislature Legislature Legislature Legislature Legislature has not held any hearings or debate about the tax proposal, and Mr. Cuomos office has declined to provide details while it is being negotiated. The State Democratic Party has even broadcast television advertisements praising the lack of any tax increases in the spending plan that Mr. Cuomo proposed."	
+	file1 = "In spite of these challenges, we felt it was critical to continue to make long-term investments in our infrastructure and our guest experience service model as we believe these efforts will further differentiate our brand. Our new model is established in about 100 company-owned restaurants and it helps create a personal customized experience for our guests. While we are confident this service strategy builds incremental sales, we did experience higher labor costs in the fourth quarter. We are continuing to refine this model to make it scalable before we proceed with system-wide rollouts."
+	file2 = "In the third quarter, we made investments in our future as we upgraded our technology infrastructure, continued our international expansion, and worked towards purchasing additional franchise locations. We had successful marketing campaigns in the third quarter. The Summer Olympics provided opportunities for friends to gather in our restaurants and cheer our athletes onto the gold. On the heels of the closing ceremony, we shifted our focus to the gridiron and more football fanatics filled our restaurants for our annual Fantasy Football draft promotions than ever before."	
 	file1 = file1.split()
 	file2 = file2.split()
 	# file1 = readFile(sys.argv[1])
@@ -497,7 +497,6 @@ if __name__ == '__main__':
 			for j in range(text[w], 0):
 				string2 += (w + " ")
 	tags = make_tags(get_tag_counts(string1, string2), maxsize = 40)
-	create_tag_image(tags, 'cloud_large1.png', size=(900, 600), fontname='Droid Sans')
+	create_tag_image(tags, 'BWLDcloud.png', size=(1200, 900), fontname='Droid Sans')
 	import webbrowser
-	webbrowser.open('cloud_large1.png') # see results
-	# webbrowser.open('cloud_large2.png') # see results
+	webbrowser.open('BWLDcloud.png')
